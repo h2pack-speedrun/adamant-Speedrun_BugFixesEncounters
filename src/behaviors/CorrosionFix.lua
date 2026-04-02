@@ -7,11 +7,10 @@ table.insert(option_fns,
         tooltip =
         "Fixes corrosion aggroing mobs on thessaly boats."
     })
-table.insert(apply_fns, {
+table.insert(patch_fns, {
     key = "CorrosionFix",
-    fn = function()
+    fn = function(plan)
         if not TraitData.ArmorPenaltyCurse then return end
-        backup(TraitData.ArmorPenaltyCurse.OnEnemySpawnFunction.Args, "SkipOnDamagedPowers")
-        TraitData.ArmorPenaltyCurse.OnEnemySpawnFunction.Args.SkipOnDamagedPowers = true
+        plan:set(TraitData.ArmorPenaltyCurse.OnEnemySpawnFunction.Args, "SkipOnDamagedPowers", true)
     end
 })

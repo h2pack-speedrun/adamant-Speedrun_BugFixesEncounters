@@ -10,7 +10,7 @@ table.insert(option_fns,
 
 table.insert(hook_fns, function()
     modutil.mod.Path.Wrap("CheckSpawnCurseDamage", function(baseFunc, enemy, traitArgs)
-        if not config.SufferingFix or not lib.isEnabled(config, public.definition.modpack) then
+        if not config.SufferingFix or not lib.isEnabled(public.store, public.definition.modpack) then
             return baseFunc(enemy, traitArgs)
         end
 

@@ -7,16 +7,18 @@ table.insert(option_fns,
         tooltip =
         "Fixes Familiars being summoned after a delay upon entering a room."
     })
-table.insert(apply_fns, {
+table.insert(patch_fns, {
     key = "FamiliarDelayFix",
-    fn = function()
-        local unblocked = RoomEventData.GlobalRoomInputUnblockedEvents
-        for _, event in ipairs(unblocked) do
-            if event.FunctionName == "FamiliarSetup" then
-                backup(event, "Args")
-                event.Args = {}
-                break
+    fn = function(plan)
+        plan:transform(RoomEventData, "GlobalRoomInputUnblockedEvents", function(unblocked)
+            local copy = rom.game.DeepCopyTable(unblocked or {})
+            for _, event in ipairs(copy) do
+                if event.FunctionName == "FamiliarSetup" then
+                    event.Args = {}
+                    break
+                end
             end
-        end
+            return copy
+        end)
     end
 })
