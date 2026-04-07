@@ -64,9 +64,9 @@ public.definition = {
     id           = "BugFixesEncounters",
     name         = "Bug Fixes: NPC & Encounters",
     category     = "Bug Fixes",
-    group        = "NPC & Encounters",
+    subgroup     = "NPC & Encounters",
     tooltip      = "Collection of bug fixes for NPCs and encounters.",
-    default      = true,
+    default      = dataDefaults.Enabled,
     affectsRunData = true,
 }
 
@@ -115,4 +115,3 @@ end)
 local uiCallback = lib.standaloneUI(public.definition, store)
 ---@diagnostic disable-next-line: redundant-parameter
 rom.gui.add_to_menu_bar(uiCallback)
-
