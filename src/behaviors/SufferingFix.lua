@@ -14,7 +14,7 @@ table.insert(option_fns,
 
 table.insert(hook_fns, function()
     modutil.mod.Path.Wrap("CheckSpawnCurseDamage", function(baseFunc, enemy, traitArgs)
-        if not store.read("SufferingFix") or not lib.isEnabled(store, public.definition.modpack) then
+        if not store.read("SufferingFix") or not lib.coordinator.isEnabled(store, public.definition.modpack) then
             return baseFunc(enemy, traitArgs)
         end
 
