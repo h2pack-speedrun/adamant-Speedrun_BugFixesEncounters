@@ -14,7 +14,7 @@ table.insert(option_fns,
 
 table.insert(hook_fns, function()
     lib.hooks.Wrap(internal, "CheckSpawnCurseDamage", function(baseFunc, enemy, traitArgs)
-        if not internal.store.read("SufferingFix") or not lib.isModuleEnabled(internal.store, public.definition.modpack) then
+        if not internal.store.read("SufferingFix") or not lib.isModuleEnabled(internal.store, internal.PACK_ID) then
             return baseFunc(enemy, traitArgs)
         end
 

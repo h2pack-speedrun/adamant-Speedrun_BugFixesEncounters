@@ -1,4 +1,4 @@
--- luacheck: globals BugFixesEncountersInternal public
+-- luacheck: globals BugFixesEncountersInternal
 local internal = BugFixesEncountersInternal
 
 internal.patch_fns = {}
@@ -7,9 +7,9 @@ internal.option_fns = {}
 
 local PACK_ID = "speedrun"
 
-local function BuildStorage(options)
+function internal.BuildStorage()
     local storage = {}
-    for _, option in ipairs(options) do
+    for _, option in ipairs(internal.option_fns) do
         if option.type == "checkbox" then
             table.insert(storage, {
                 type = "bool",
@@ -31,7 +31,5 @@ import("behaviors/FamiliarDelayFix.lua")
 import("behaviors/GGGFix.lua")
 import("behaviors/MiniBossEncounterFix.lua")
 import("behaviors/SufferingFix.lua")
-
-public.definition.storage = BuildStorage(internal.option_fns)
 
 return internal
