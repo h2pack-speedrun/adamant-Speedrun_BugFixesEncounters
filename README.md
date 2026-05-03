@@ -1,30 +1,30 @@
-# BugFixesEncounters
+# Bug Fixes: Encounters
 
-> Targeted fixes for encounter, room-state, and encounter-progression bugs.
+Fix encounter, room-state, and encounter-progression bugs that can affect route consistency.
 
-Part of the [Speedrun modpack](https://github.com/h2pack-speedrun/speedrun-modpack).
+Part of the [Speedrun modpack](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Core/).
 
 ## What It Does
 
-BugFixesEncounters collects a set of encounter-side fixes that improve room consistency and remove bugs that can distort speedrun routing or room flow.
+Bug Fixes: Encounters collects encounter-side fixes that improve room consistency and remove bugs that can distort speedrun routing or room flow.
 
-The current module includes fixes for:
+The module currently includes:
 
-- `Corrosion Fix`
+- Corrosion Fix
   Fixes Medea Corrosion on Sight aggroing mobs on Thessaly boats.
-- `Familiar Delay Fix`
-  Fixes familiars being summoned after a bit of a dalay upon entering a room.
-- `GGG Echo Fix`
-  Echo can offer GGG on Jpom runs.
-- `Miniboss Encounter Fix`
+- Familiar Delay Fix
+  Fixes familiars being summoned after a delay upon entering a room.
+- GGG Echo Fix
+  Lets Echo offer GGG on Jeweled Pom runs.
+- Miniboss Encounter Fix
   Fixes miniboss encounters with top-screen health bars not properly advancing biome depth.
-- `Suffering Fix`
+- Suffering Fix
   Fixes Suffering on Sight not bypassing the Wards vow correctly when dealing damage.
 
-Use this module when you want encounter-side bug fixes applied without changing the broader routing or utility behavior of the pack.
+Use it when you want encounter-side bug fixes applied without changing the broader routing or utility behavior of the pack.
 
 ## Installation
 
-Install via [r2modman](https://thunderstore.io/c/hades-ii/) or manually place in your `ReturnOfModding/plugins` folder.
+Install via r2modman.
 
-This module is usually installed as part of the full [Speedrun modpack](https://github.com/h2pack-speedrun/speedrun-modpack), where it appears in the shared Speedrun UI with the other speedrun-focused modules.
+This module is usually installed as part of the full [Speedrun modpack](https://thunderstore.io/c/hades-ii/p/adamant/Speedrun_Core/), where it appears in the shared Speedrun UI with the other speedrun-focused modules.
