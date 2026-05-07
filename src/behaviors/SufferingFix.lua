@@ -5,7 +5,7 @@ local hook_fns = internal.hook_fns
 table.insert(option_fns,
     {
         type = "checkbox",
-        configKey = "SufferingFix",
+        alias = "SufferingFix",
         label = "Suffering Fix",
         default = true,
         tooltip =

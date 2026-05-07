@@ -5,7 +5,7 @@ local patch_fns = internal.patch_fns
 table.insert(option_fns,
     {
         type = "checkbox",
-        configKey = "MiniBossEncounterFix",
+        alias = "MiniBossEncounterFix",
         label = "Miniboss Encounter Fix",
         default = true,
         tooltip =

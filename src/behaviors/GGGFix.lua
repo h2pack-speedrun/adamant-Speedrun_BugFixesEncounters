@@ -5,7 +5,7 @@ local patch_fns = internal.patch_fns
 table.insert(option_fns,
     {
         type = "checkbox",
-        configKey = "GGGFix",
+        alias = "GGGFix",
         label = "GGG Echo Fix",
         default = true,
         tooltip =

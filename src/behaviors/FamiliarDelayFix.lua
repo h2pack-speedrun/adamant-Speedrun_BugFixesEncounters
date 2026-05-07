@@ -5,7 +5,7 @@ local patch_fns = internal.patch_fns
 table.insert(option_fns,
     {
         type = "checkbox",
-        configKey = "FamiliarDelayFix",
+        alias = "FamiliarDelayFix",
         label = "Familiar Delay Fix",
         default = true,
         tooltip =

@@ -13,8 +13,8 @@ function internal.BuildStorage()
         if option.type == "checkbox" then
             table.insert(storage, {
                 type = "bool",
-                alias = option.configKey,
-                configKey = option.configKey,
+                alias = option.alias,
+                default = option.default,
             })
         else
             error(
